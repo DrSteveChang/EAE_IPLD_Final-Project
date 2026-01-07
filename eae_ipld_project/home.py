@@ -1,6 +1,19 @@
 import streamlit as st
 import base64
 
+# ---------------------------------------------------------
+# FIX: Use absolute path to locate the image
+# ---------------------------------------------------------
+
+# 1. Get the directory where this current script (home.py) is located
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Construct the full path to the image file
+#    This joins the directory path with the filename
+image_path = os.path.join(current_dir, "eae_img.png")
+
+# 3. Display the image
+st.image(image_path, width=200)
     
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
