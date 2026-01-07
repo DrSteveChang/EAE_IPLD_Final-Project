@@ -8,6 +8,7 @@ import os
 
 # 1. Get the directory where this current script (home.py) is located
 current_dir = os.path.dirname(os.path.abspath(__file__))
+image_path = os.path.join(current_dir, "eae_img.png")
 
 # 2. Construct the full path to the image file
 #    This joins the directory path with the filename
@@ -26,7 +27,7 @@ st.set_page_config(
 def home_page():
     # ----- Left menu -----
     with st.sidebar:
-        st.image("eae_img.png", width=200)
+        st.image(image_path, width=200)
         st.header("Introduction to Programming Languages for Data")
         st.write("###")
         st.write("***Final Project - Dec 2025***")
