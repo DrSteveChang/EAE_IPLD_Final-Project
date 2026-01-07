@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+import os
 
 # ---------------------------------------------------------
 # FIX: Use absolute path to locate the image
